@@ -66,9 +66,9 @@ services:
   img:
     image: amoutonbrady/gupload
     environments:
-      - MAX_SIZE_MB=20
-      - VALID_SIZES=[400]
-      - ALLOWED_ORIGINS=["http://0.0.0.0:4242/"]
+      MAX_SIZE_MB: "20"
+      VALID_SIZES: "['400']"
+      ALLOWED_ORIGINS: '["http://0.0.0.0:4242/"]'
     ports:
       - "4242:4242"
     volumes:
@@ -84,8 +84,8 @@ Configration is done through env variables.
 | `MAX_SIZE_MB`     | Maximum size per file in MB          | `number`   | 20                       |
 | `VALID_SIZES`     | List of sizes available for resizing | `number[]` | [400]                    |
 | `ALLOWED_ORIGINS` | List of allowed origins for CORS     | `string[]` | ["http://0.0.0.0:4242/"] |
-| `PORT`            | (Don't use with Docker for now)      | `string[]` | ["http://0.0.0.0:4242/"] |
-| `HOST`            | (Don't use with Docker for now)      | `string[]` | ["http://0.0.0.0:4242/"] |
+| `PORT`            | -                                    | `number`   | 4242                     |
+| `HOST`            | -                                    | `string`   | "0.0.0.0"                |
 
 ## Technologies used
 
