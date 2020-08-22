@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tsc && node dist/server",
     "build": "tsc",
-    "start": "node dist/server"
+    "start": "node dist/server",
+    "changelog": "gitmoji-changelog"
   },
   "keywords": [
     "nodejs",
@@ -26,6 +27,7 @@
     "fastify-multipart": "^2.0.3",
     "fastify-static": "^3.2.0",
     "fs-extra": "^9.0.1",
+    "gitmoji-changelog": "^2.1.0",
     "hasha": "^5.2.0",
     "sharp": "^0.25.4"
   },
