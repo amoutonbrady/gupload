@@ -1,6 +1,6 @@
 {
   "name": "gupload",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An easy file uploading solution for simple uploads needs ",
   "main": "dist/server.js",
   "scripts": {

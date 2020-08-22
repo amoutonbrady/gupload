@@ -12,5 +12,4 @@ RUN pnpm install
 COPY . .
 RUN pnpm build
 
-EXPOSE 4242
 CMD ["npm", "start"]
