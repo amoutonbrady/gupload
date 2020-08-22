@@ -1,16 +1,24 @@
 {
   "name": "gupload",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "An easy file uploading solution for simple uploads needs ",
+  "main": "dist/server.js",
   "scripts": {
     "dev": "tsc && node dist/server",
     "build": "tsc",
     "start": "node dist/server"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "nodejs",
+    "docker",
+    "fileupload"
+  ],
+  "author": "Alexandre Mouton-Brady <amoutonbrady@gmail.com>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amoutonbrady/gupload"
+  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "fastify": "^3.2.1",
