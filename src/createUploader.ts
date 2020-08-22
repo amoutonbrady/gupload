@@ -15,7 +15,7 @@ export function createUploader(dest: string) {
 
     const body = (req.body as unknown) as Record<string, WTF[]>;
     const file = body[fieldname] && body[fieldname][0];
-    const fileSize = file.data.byteLength / 1024;
+    const fileSize = file.data.byteLength / 1e6;
 
     if (!file) {
       rep.code(400).send(new Error("file is not set"));
