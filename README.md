@@ -4,9 +4,6 @@ An easy file uploading solution for simple uploads needs
 
 ## Usage
 
-Due to Docker way of exposing ports, for now the image is tied to port 4242.
-You can remap it how you want with Docker port mapping
-
 - `[GET] /:filename`
   - Query: If you only pass one of those parameters, the original image will be sent
     - `h`: number // Height of the image
@@ -47,11 +44,13 @@ $ curl --location --request GET 'http://0.0.0.0:4242/058c03293925ead7a559216a877
 
 ## From scratch:
 
-`$ git clone git@github.com:amoutonbrady/gupload.git`
-`$ pnpm install` (might use yarn or npm if you will, but it was tested only with pnpm)
-`$ pnpm build` compile TS to JS
-`$ pnpm start` start the compiled server
-`$ pnpm dev` do the two commands above in one command
+```bash
+$ git clone git@github.com:amoutonbrady/gupload.git`
+$ pnpm install # (might use yarn or npm if you will, but it was tested only with pnpm)
+$ pnpm build # compile TS to JS
+$ pnpm start # start the compiled server
+$ pnpm dev # do the two commands above in one command
+```
 
 ## Dockerfile:
 
@@ -65,7 +64,11 @@ version: "3.8"
 services:
   img:
     image: amoutonbrady/gupload
+    export:
+    
     environments:
+      PORT: 4242
+      HOST: 0.0.0.0
       MAX_SIZE_MB: "20"
       VALID_SIZES: "['400']"
       ALLOWED_ORIGINS: '["http://0.0.0.0:4242/"]'
